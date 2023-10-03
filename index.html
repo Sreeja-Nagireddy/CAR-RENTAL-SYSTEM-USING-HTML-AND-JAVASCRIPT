@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Rental System</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Car Rental Service</h1>
+    </header>
+    
+    <section>
+        <h2>Available Cars</h2>
+        <ul>
+            <li>
+                <h3>Car Model: Toyota Camry</h3>
+                <p>Price per day: $50</p>
+                <button onclick="rentCar('Toyota Camry')">Rent Now</button>
+            </li>
+            <li>
+                <h3>Car Model: Honda Civic</h3>
+                <p>Price per day: $45</p>
+                <button onclick="rentCar('Honda Civic')">Rent Now</button>
+            </li>
+            <!-- More car listings go here -->
+        </ul>
+    </section>
+
+    <section>
+        <h2>Your Cart</h2>
+        <ul id="cart">
+            <!-- Items in the cart will be displayed here -->
+        </ul>
+    </section>
+
+    <script>
+        function rentCar(carModel) {
+            // You would typically use JavaScript to interact with the backend
+            // to add the selected car to the user's cart and handle the rental process.
+            // This is a simplified example for demonstration purposes.
+            const cart = document.getElementById('cart');
+            const listItem = document.createElement('li');
+            listItem.textContent = `Rented: ${carModel}`;
+            cart.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
